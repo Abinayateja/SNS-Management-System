@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="../static/css/addnotes.css">
+
+<div class="outer-container">
+
+    <div class="image-container">
+        <img src="../static/images/notes-removebg-preview.png" alt="Notes">
+    </div>
+
+    <div class="notes-section">
+
+        <form action="{{url_for('uploadfile')}}" method="POST" enctype="multipart/form-data">
+
+            <h1 class="head">Upload File</h1>
+
+            <p class="caption">Upload new file for your reference</p>
+
+            <label for="file">File</label>
+            <input type="file" name="file" id="file" placeholder="Upload your file">
+
+            <button type="submit" id="add-btn">Upload File</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

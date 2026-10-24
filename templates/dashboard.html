@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block navmenu %}
+<nav>
+    <div class="nav-container">
+        <div>
+            <a href="{{url_for('profile')}}">
+                <div class="profile-pic">
+                    <img src="../static/images/profile.jpeg" alt="Profile">
+                </div>
+            </a>
+        </div>
+        <div class="right-nav">
+            <div class="wraper">
+                <a href="{{url_for('dashboard')}}">Dashboard</a>
+                <div class="bar">
+                    
+                </div>
+            </div>
+            <div>
+                <a href="{{url_for('files')}}">Files</a>
+            </div>
+            <div>
+                <a href="{{url_for('notes')}}">Notes</a>
+            </div>
+            <div>
+                <a href="{{url_for('profile')}}">Profile</a>
+            </div>
+            <div>
+                <a href="{{url_for('logout')}}">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<div class="outer-container">
+    <div class="container" method="post">
+        <h1 class="head">Welcome <span>{{username}}</span></h1>
+        <div class="right-content">
+            <a href="/files">
+                <div class="files">
+                    <h1>My Files</h1>
+
+                </div>
+            </a>
+            <a href="/notes">
+                <div class="notes">
+                    <h1>My Notes</h1>
+
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div>
+            <img src="../static/images/notes-removebg-preview.png" alt="">
+        </div>
+        <div class="right-area">
+            <div class="right-up">
+                <div class="card">
+                    <h1>TOTAL NOTES</h1>
+                    <h1>{{notes_count}}</h1>
+                </div>
+                <div class="card">
+                    <h1>TOTAL FILES</h1>
+                    <h1>{{files_count}}</h1>
+                </div>
+            </div>
+            <div class="right-down">
+                <h3 class="head">Recent Notes</h1>
+                <div class="notes-container">
+                    {% for note in recent_notes %}
+                    <div class="rnotes-card">
+                        {{note.title}}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

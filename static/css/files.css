@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Marvel";
+}
+
+body {
+    margin-top: 40px;
+    background-color: #FCEBD3;
+}
+
+.container {
+    color: #171717;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.head {
+    font-size: 40px;
+    color: #171717;
+    font-family: "Marvel";
+}
+
+span {
+    color: #7A1F3D;
+    font-family: "Marvel";
+    font-size: 52px;
+    font-weight: bolder;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    border: 1px solid #E8DED0;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    transition: all 0.5s linear 0s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #171717;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+    color: #171717;
+}
+
+.right-content {
+    display: flex;
+    gap: 40px;
+}
+
+.right-content h1 {
+    color: #171717;
+}
+
+.files,
+.notes {
+    border: 2px solid #7A1F3D;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s linear 0s;
+    color: #171717;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.files:hover,
+.notes:hover {
+    transform: scale(1.05);
+    background-color: #7A1F3D;
+    box-shadow: 0px 5px 20px rgba(0, 207, 232, 0.25);
+}
+
+.files:hover h1,
+.notes:hover h1 {
+    color: #FFFFFF;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 35px rgba(122, 31, 61, 0.15);
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the container */
+.upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+}
+.head {
+    margin-left: 100px;
+    font-size: 50px;
+}
+
+form {
+    position: absolute;
+    top: 50px;
+    right: 120px;
+}
+
+/* Style the custom choose file button */
+.upload-btn,.submit-btn {
+    border: 2px solid #7A1F3D;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.3s linear 0s;
+    color: #171717;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    font-weight: bolder;
+}
+.file-upload {
+    font-size: 20px;
+    background-color: #7A1F3D;
+}
+.upload-btn:hover,.submit-btn:hover {
+  transform: scale(1.05);
+  background-color: #7A1F3D;
+  box-shadow: 0px 5px 20px rgba(0, 207, 232, 0.25);
+  color: #FFFFFF;
+}
+#lnk {
+    color: black;
+}
+.filter-btn {
+    width: 120px;
+    height: 40px;
+    border: 2px solid #171717;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #171717;
+    font-size: 20px;
+    cursor: pointer;
+}
+.filter-btn:hover {
+    background-color: #171717;
+    color: white;
+}

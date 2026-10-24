@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="../static/css/register.css">
+    <div class="form-container">
+        <div>
+            <img src="../static/images/banner1.png" width="440px">
+        </div>
+        <form action="{{url_for('verifyOTP')}}" class = "form" method="post">
+
+            <h1>Verify OTP</h1>
+            <p>Please enter your otp.</p>
+            <label for="otp">Enter OTP</label>
+            <input type="number" placeholder="Enter OTP" id="email" name = "otp">
+            <input type="submit" value="Verify" id="btn">
+        </form>
+        <div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    {% if category == "msg" %}
+                        <div class="alert alert-success">
+                            {{messages}}
+                        </div>
+                    {% elif category == "err" %}
+                        <div class="alert alert-danger">
+                            {{messages}}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endwith %}
+        </div>
+    </div>
+{% endblock %}

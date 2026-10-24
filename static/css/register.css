@@ -1,0 +1,87 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 95vh;
+    border-radius: 8px;
+    position: relative;
+}
+
+.form > h1 {
+    color: #E9E9E9;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.form > p {
+    color: #c1bdbd;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.form {
+    width: 500px;
+    padding: 50px;
+    border: 0.5px solid rgba(255, 255, 255, 0.635);
+    border-radius: 15px;
+    
+}
+
+#btn {
+    background-color: aqua;
+    color: rgba(0, 0, 0, 0.689);
+    font-weight: bold;
+    transition: all 0.3s linear 0s;
+    cursor:pointer;
+    font-size: 24px;
+}
+#btn:hover {
+    background-color:aquamarine;
+    transform: translateY(-3px);
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+form input {
+    color: white;
+    outline: none;
+    width: 100%;
+    display: block;
+    background-color: #313131;
+    border: none;
+    border-radius: 8px;
+    height: 55px;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+form label {
+    color: #a2a1a1;
+    font-size: 22px;
+}
+body {
+    background-color: #151515;
+}
+
+.alert {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+}
+
+.alert-success {
+    color: green;
+}
+
+.alert-danger {
+    color: red;
+}

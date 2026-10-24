@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="../static/css/notes.css">
+
+<div class="outer-container">
+
+    <div class="header">
+        <h1>Files</h1>
+        <a href="files/uploadfile"><button type="submit" id="add-btn">Upload File</button></a>
+
+    </div>
+
+    <div class="content">
+
+        <div class="image-container">
+            <img src="../static/images/notes-removebg-preview.png" alt="">
+        </div>
+
+        <div class="notes-section">
+
+            <form class="search-container">
+                <label for="search">Search</label>
+                <input type="search" id="search" name="search">
+                <input type="submit" value="Search" id="search-btn">
+            </form>
+            
+            <div class="grid">
+                {% for file in files %}
+                <a href="/files/view/{{file.fileid}}" target="_blank">
+                    <div class="card">
+                        <div class="close-icon-con"
+                            onclick="event.stopPropagation(); location.href='/files/delete/{{ file.fileid }}'">
+                            <i class="fa-regular fa-circle-xmark close-icon"></i>
+                        </div>
+                        <h2>{{ file.originalname }}</h2>
+
+                        <p>File Type: {{ file.mimetype }}</p>
+
+                        <p>File Size: {{ file.size }} bytes</p>
+
+                        <p>Uploaded: {{ file.created_at }}</p>
+                        <a href="{{ url_for('viewfile', fileid=file.fileid) }}" target="_blank">
+                            <button class="download-btn">Download</button>
+                        </a>
+
+                    </div>
+                </a>
+                {% else %}
+                <p>No files uploaded yet.</p>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="https://kit.fontawesome.com/7a16a8d132.js" crossorigin="anonymous"></script>
+{% endblock %}

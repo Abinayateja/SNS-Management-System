@@ -1,0 +1,70 @@
+.container {
+    width: 500px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    padding: 40px;
+}
+
+.container h1 {
+    font-size: 35px;
+}
+.container p {
+    margin-top: 30px;
+    font-size: 26px;
+}
+body {
+    background-color: #FCEBD3;
+    color: #171717;
+}
+
+.outer-container {
+    padding: 40px 80px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.image-container {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.image-container img {
+    width: 320px;
+}
+
+.notes-section {
+    flex: 1;
+}
+
+.edit-icon-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    font-size: 30px;
+    color: #171717;
+}

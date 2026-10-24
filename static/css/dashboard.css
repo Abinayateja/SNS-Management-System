@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Marvel";
+}
+
+.nav-container {
+    background-color: #171717;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 350px;
+}
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+nav a{
+    color: white;
+    font-size: 24px;
+
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    overflow: hidden;
+    
+}
+
+.profile-pic img {
+    width: 100%;
+}
+
+/* .wraper {
+    position: relative;
+}
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+} */
+body {
+    background-color: #FCEBD3;
+}
+
+.container {
+    color: #171717;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.head {
+    font-size: 40px;
+    color: #171717;
+    font-family: "Marvel";
+}
+
+span {
+    color: #7A1F3D;
+    font-family: "Marvel";
+    font-size: 52px;
+    font-weight: bolder;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.card {
+    border: 1px solid #E8DED0;
+    width: 400px;
+    height: 150px;
+    border-radius: 20px;
+    transition: all 0.5s linear 0s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #171717;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+    color: #171717;
+}
+
+.right-content {
+    display: flex;
+    gap: 40px;
+}
+
+.right-content h1 {
+    color: #171717;
+}
+
+.files,
+.notes {
+    border: 2px solid #7A1F3D;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s linear 0s;
+    color: #171717;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.files:hover,
+.notes:hover {
+    transform: scale(1.05);
+    background-color: #7A1F3D;
+    box-shadow: 0px 5px 20px rgba(0, 207, 232, 0.25);
+}
+
+.files:hover h1,
+.notes:hover h1 {
+    color: #FFFFFF;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 35px rgba(122, 31, 61, 0.15);
+}
+
+a {
+    text-decoration: none;
+}
+
+.right-up {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+}
+
+
+.notes-container {
+    background-color: white;
+}

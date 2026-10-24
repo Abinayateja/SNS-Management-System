@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Marvel";
+}
+.nav-container {
+    background-color: #171717;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 350px;
+}
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+nav a{
+    color: white;
+    font-size: 24px;
+
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    overflow: hidden;
+    
+}
+
+.profile-pic img {
+    width: 100%;
+}
+
+body {
+    background-color: #FCEBD3;
+    color: #171717;
+}
+
+.outer-container {
+    padding: 40px 80px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+#add-btn,.download-btn {
+    width: 170px;
+    height: 40px;
+    border: 2px solid #7A1F3D;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #171717;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-btn:hover,.download-btn:hover {
+    background-color: #7A1F3D;
+    color: white;
+    transform: scale(1.05);
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.image-container {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.image-container img {
+    width: 320px;
+}
+
+.notes-section {
+    flex: 1;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.search-container label {
+    font-size: 20px;
+}
+
+#search {
+    width: 300px;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #171717;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 18px;
+    color: black;
+}
+
+#search-btn,#filter-btn {
+    width: 120px;
+    height: 40px;
+    border: 2px solid #171717;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #171717;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.4s linear 0s;
+}
+#filter-btn {
+    width: 135px;
+}
+#lnk {
+    color: black;
+}
+#search-btn:hover {
+    background-color: #171717;
+    color: white;
+}
+
+#filter-btn:hover {
+    background-color: #171717;
+    color: white;
+}
+
+.grid {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    height: 250px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(122, 31, 61, 0.15);
+}
+
+.card h1 {
+    font-size: 28px;
+    margin-top: 20%;
+    color: #171717;
+}
+
+.close-icon-con {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.close-icon {
+    font-size: 30px;
+    color: #171717;
+}
+
+

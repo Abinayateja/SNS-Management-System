@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="../static/css/register.css">
+    <div class="form-container">
+        <div>
+            <img src="../static/images/banner.png" width="440px">
+        </div>
+        <form action="/register" class = "form" method="post">
+            <h1>Create your account</h1>
+            <p>Provide your details below</p>
+            <label for="name">Name: </label>
+            <input type="text" placeholder="Enter Your Name" id="name" name="username">
+            <label for="email">Email: </label>
+            <input type="email" placeholder="hello@example.com" id="email" name="email">
+            <label for="password">Password: </label>
+            <input type="password" placeholder="Enter Password" id="password" name="password">
+            <label for="confirm">Confirm Password: </label>
+            <input type="password" placeholder="Enter Password Again" id="confirm" name="confirm_password">
+            <input type="submit" value="Sign up" id="btn">
+            <p>Already have an account? <a href="/login">Login</a></p>
+        </form>
+        <div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    {% if category == "msg" %}
+                        <div class="alert alert-success">
+                            {{messages}}
+                        </div>
+                    {% elif category == "err" %}
+                        <div class="alert alert-danger">
+                            {{messages}}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endwith %}
+        </div>
+    </div>
+{% endblock %}
